@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Layout</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: black;
+            height:80px;
+
+        }
+
+        nav a{          /* 한칸 띄고 자식 태그 선정 */
+            color : white;
+            text-decoration: none;
+            float:left;
+            display:block;
+            width:100px;
+            height:100%;
+            padding:10px 20px;
+            line-height: 60px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        nav a:hover{
+            background-color: cornflowerblue;
+        }
+
+        section{
+            margin:0 auto;
+            width:1024px;
+            background-color: lightblue;
+            border:1px solid black;
+            padding:10px;
+            min-height: 200px;
+        }
+
+        footer{
+            background-color: lightgray;
+            min-height: 80px;
+        }
+
+        footer .copy{
+            float:left;
+            line-height: 80px;
+        }
+        
+        footer .family{
+            float : right;
+            line-height: 80px;
+            padding:0px 20px;
+        }
+
+        footer .family{
+            float: right;
+            line-height: 80px;
+            min-width: 120px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="http://naver.com">네이버</a>
+            <a href="http://kakao.com">카카오</a>
+            <a href="http://youtube.com">유튜브</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>My Page</h1>
+        <p>My Page에 오신 걸 환영합니다~!</p>
+    </section>
+
+    <section>
+        <h1>2번째 섹션</h1>
+        <p>2번째 영역 입니다~!</p>
+        <article>
+            <!-- 문서, 기사, 글 따위를 작성하는 영역 -->
+            그들을 이상이 오아이스도 황금시대의 되려니와, 모래뿐일 것이다. 오직 품었기 평화스러운 듣는다. 뛰노는 인생을 관현악이며, 위하여서 바이며, 우리 봄날의 보라. 얼음에 대고, 싶이 낙원을 미인을
+            소리다.이것은 것은 인간은 수 말이다. 쓸쓸한 이 무엇을 교향악이다. 청춘은 생의 이상 있다. 투명하되 어디 피에 사랑의 있는 철환하였는가? 일월과 피에 꽃이 그들은 아름다우냐? 공자는 열매를
+            청춘의 같이, 위하여서 불어 대중을 생생하며, 뜨거운지라, 위하여서.
+        </article>
+    </section>
+
+    <section>
+        <h1>3번째 섹션</h1>
+        <p>3번째 섹션입니다</p>
+    </section>
+    <footer>
+        <p class="copy">Copyright ⓒ ALOHA CLASS. All Rights Reserved</p>
+        <p class="family">
+            <select name="family">
+                <option value="1">네이버</option>
+                <option value="2">카카오</option>
+                <option value="3">유튜브</option>
+            </select>
+        </p>
+    </footer>
+</body>
+
+</html>line-height: 60px;

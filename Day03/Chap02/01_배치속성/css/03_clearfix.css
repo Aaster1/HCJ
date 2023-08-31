@@ -1,0 +1,44 @@
+    
+.container{
+    position: relative;
+    width: 1024px;
+    min-height: 500px;
+    border: 1px dashed orange;
+    margin: auto;
+}
+
+.item{
+    width: 300px;
+    height: 200px;
+}
+
+
+/* 플로터 요소 바로 다음영역을 지정하는 ::after에 빈 값과 block요소를 넣고 clear를 속성을 넣으면 원인 제공 요소에서 처리하게끔 할 수 있다. */
+/* **********************!!!! */
+.inner::after{
+    display: block;
+    content:'';
+    clear:right;
+}
+/* ************************ */
+
+h1{
+    text-align: center;
+
+}
+
+
+.left{
+    float: left;
+    background-color: pink;
+
+}
+.right{
+    float: right;
+    background-color: lightblue;
+    height: 400px;
+}
+.next{
+    background-color: cornflowerblue;
+    width: 100%;
+}
