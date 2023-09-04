@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+/* 가장 작은 모바일 화면에서부터 세팅을 잡고 */
+/* 점차 높은 디스플레이로 맞춰감 */
+/* 초기 세팅은 모바일인 360px기준 */
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+header,
+footer {
+    width: 100%;
+}
+
+nav,
+section {
+    height: 700px;
+    margin: 10px 0;
+}
+
+nav {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+header,
+nav,
+section,
+footer {
+    border: 1px solid black;
+    padding: 20px 0;
+}
+
+
+
+/* 태블릿 크기까지 확장 시 */
+@media screen and (min-width: 768px) {
+
+    /* min-width : 해당 수치 이상의 경우 */
+    .wrap {
+        max-width: 90%;
+    }
+
+    header,
+    footer {
+        width: 100%;
+    }
+
+    nav,
+    section {
+        float: left;
+    }
+
+    nav {
+        width: 20%;
+        margin-right: 1.5%;
+    }
+
+    section {
+        width: 78.5%;
+    }
+}
+
+/* pc화면까지 확장 시 */
+@media screen and (min-width: 1024px) {
+    .wrap {
+        max-width: 70%;
+    }
+
+}
+

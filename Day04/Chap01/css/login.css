@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: cadetblue;
+}
+input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;      /* 투명 배경 */
+}
+
+
+a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+
+.container{
+    margin: auto;
+    width: 100%;
+    height: 100vh;       /* 부모요소가 아닌 웹 window 기준, % */
+}
+
+.inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #00000088;
+    background-color: white;
+    width: 350px;
+    height: 650px;
+}
+.form{
+    width: 100%;
+}
+
+.input-id{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #aaa;  
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.input-id input{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #aaa;  
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-pw{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #aaa;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.input-pw input{
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #aaa;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+/* html에서 쓴 placehoer를 ::가상선택자를 통해 지정하여 꾸며줄 수도 있다. */
+.input-pw input::placeholder{
+    color: #aaa;
+}
+.input-id input::placeholder{
+    color: #aaa;
+}
+
+.input-id input ~ .border{
+    display: inline-block;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0;
+    border: 0 solid royalblue;
+}
+
+.input-pw input ~ .border{
+    display: inline-block;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0;
+    border: 0 solid royalblue;
+}
+/* ::focus 를 통해 포커싱 시를 따로 꾸며줄 수도 있다 */
+.input-id input:focus ~ .border{
+    width: 100%;
+    border-width: 1px;
+    transition: width 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.input-pw input:focus ~ .border{
+    width: 100%;
+    border-width: 1px;
+    transition: width 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.check-div{
+    position: relative;
+}
+
+.check-div input{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+.check-div label{
+    display: inline-block;
+    /* padding-left: 25px; */
+}
+/* ::checked
+    - input 체크박스가 체크된 상태를 선택
+    ex) #login .login-remember label input:chrecked ~ .checkmark */
+.login-btnbox{
+    width: 100%;
+    height: 50px;
+    background-color: #4169e1;
+    border-radius: 15px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+.login-btnbox:hover{
+    background-color: #4169e1bb
+}
+
+.copy{
+    font-size: 14px;
+    text-align: center;
+}
+
+.temp{
+    width: 100%;
+    height: 330px;
+
+}
+img{
+    height: 330px;
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+}

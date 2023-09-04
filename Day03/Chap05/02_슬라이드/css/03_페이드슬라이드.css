@@ -1,0 +1,98 @@
+.container{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    border: 10px solid black;
+}
+
+.slide{
+    position: absolute;
+    width: calc(800px * 3);    
+    
+    
+}
+
+/* 첫번째 item슬라이드만 제외하고 투명하게 */
+.slide div{
+    margin: 0;
+    padding: 0;
+}
+.slide div:not(:first-of-type){
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.slide .item:nth-of-type(1){
+    animation-name: slide1;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+.slide .item:nth-of-type(2){
+    animation-name: slide2;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    
+}
+.slide .item:nth-of-type(3){
+    animation-name: slide3;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+
+.slide img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 800px;
+    height: 400px;
+    /* float: left;    */
+}
+@keyframes slide1 {
+    0%{
+    }
+    33%{
+        opacity: 0;
+    }
+    66%{
+        
+        opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+}
+@keyframes slide2 {
+    0%{
+        opacity: 0;
+    }
+    33%{
+        opacity: 1;
+    }
+    66%{
+    }
+    100%{
+    }
+    
+}
+@keyframes slide3 {
+    0%{
+    }
+    33%{
+        opacity: 0;
+    }
+    66%{
+        
+        opacity: 1;
+    }
+    100%{
+    }
+    
+}

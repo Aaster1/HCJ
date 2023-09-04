@@ -1,0 +1,38 @@
+.container{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 10px solid black;
+}
+
+.slide{
+    position: absolute;
+    width: calc(800px * 3);    
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.52,1.35,.5,-0.32);
+    ;
+
+}
+
+.slide img{
+    width: 800px;
+    height: 400px;
+    float: left;   
+}
+
+@keyframes slide{
+    0%{
+        left:0;
+    }
+    50%{
+        left:-200%;
+
+    }
+    100%{
+        left:0;
+    }
+}
