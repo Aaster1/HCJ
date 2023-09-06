@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+    <!-- 자바스크립트 코드는 <script> 태그 안에서 작성-->
+    <script>
+        // 변수 선언
+        // let  :   변수 선언 키워드
+        //          - 2015년 이후의 자바스크립트 문법
+
+        // var :    변수 선ㄴ언 키워드
+        //          - 1995 ~ 2015 까지의 자바스크립트 문법
+
+        
+
+        //상수
+
+        const p1=10
+        const p2=20
+        let sum = p1+p2
+
+        // 자바스크립트에서는 문장구분 기호 ; 생략할 수 있다
+
+/* 
+★★★★★★★★★  var 와 let의 차이 ★★★★★★★★★★★★★★★★★★★     
+ */
+        
+        var a= 100
+        var b=200
+        var result = a+b;
+
+
+        /* var
+            - 정의된 변수 중복선언 선언 허용
+            - 변수의 사용범위를 전역범위, 함수범위만 제공 */
+
+        var a=1         //var의 경우 이미 존재하는 변수이름으로 선언해도 에러나지 않는다.
+
+        /* 
+            let
+                -  정의된 변수 중복선언 불가
+                -  변수의 사용범위를 전역범위, 함수범위, 블록범위{}까지 가능*/
+
+
+        let x = 1000
+        let y = 2000
+        let total = x+y;
+
+       /*  let x = 1;  */     //let의 경우, 이미 존재하는 변수이름으로 선언할 수 없다.
+
+       console.log('sum : ' + sum)
+       console.log('result : ' + result)
+       console.log('total : ' + total)
+
+       let test
+       console.log(test);
+
+       //undefined - 타입이 정해지지 않은 자료형
+    //    값 세팅이 안된 경우
+    // null != undefined
+    // ★★★★JavaScript에서의 null은 타입이 Object 이며 값이 없을 경우를 의미함.★★★★★★
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

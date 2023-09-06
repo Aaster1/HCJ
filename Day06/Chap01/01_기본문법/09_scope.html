@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope (범위)</title>
+    <script>
+        function test(){
+            var local = 10      /* 전역 */
+
+            if(true){
+                let local = 20      /* 블록 내 임시목숨 */
+                console.log(local);
+            }
+            console.log(local);
+        }
+        
+        function test2(){
+            let local2 = 10      /* 전역 */
+
+            if(true){
+                let local2 = 20      /* 기존과 다른 블록에선  선언이 가능하지만 다른 래퍼런스다.*/
+                console.log(local2);
+            }
+            console.log(local2);
+        }
+        test2()
+
+        console.log(test3);     /* 잘보면 접근은 가능하다. 단지, 값이 할당되는 과정이 인식되지 않아 undefined로 뜬다. 즉, var 선언 자체만으로는 Hoisting이 적용된 경우다. */
+        var test3 = 'test'      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

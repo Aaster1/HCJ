@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 정의와 호출</title>
+    <script>
+
+        // 익명함수는 함수정의 전에 호출 불가
+        // 선언적함수는 함수정의 전에 호출 가능(호이스팅)
+
+        /* 익명함수() */  //<--구동x
+        선언적함수()
+
+
+        /* 익명 함수 정의 */
+        const 익명함수 = function(){
+            console.log(`익명함수 호출!`);
+        }
+
+        /* 선언적 함수 정의 */
+        function 선언적함수(){
+            console.log(`선언적함수 호출!`);
+        }
+
+        //함수 호출
+        익명함수()
+        선언적함수()
+
+        //출력
+        console.log(typeof 익명함수);           /* 이름 자체가 변수처럼 function 타입의 무언가로 되어있음 */
+        console.log(익명함수);                  /* 해당 것을 출력해보면 내용 전체를 보여줌. ()와 같은 형태로 출력하게되면, 함수를 실행함과 동시에 반환값을 출력하는 형태가 됨 */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

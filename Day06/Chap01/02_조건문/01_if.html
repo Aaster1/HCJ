@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if 조건문</title>
+    <script>
+        // if 조건문
+        let a = 30
+        let b = 20
+
+        if(a>b){
+            console.log(`${a}이 ${b}보다 크다`);
+            
+        } else if(a==b){
+            console.log(`${a}는 ${b}와 같다`);
+        } else{
+            console.log(`${a}이 ${b}보다 작다`);
+        }
+ 
+        let input = prompt(`숫자를 입력하세요`)     /* prompt는 반환할 시 값을 String으로 반환한다 */
+
+        if(input>0)         /* 하지만 비교연산자를 통해 숫자와 비교시 알아서 변환된다. */
+            alert(`양수입니다`)
+
+        if(input<0)         /* 하지만 비교연산자를 통해 숫자와 비교시 알아서 변환된다. */
+            alert(`음수입니다`)
+
+            // 아래 과정을 산술연산으로 실행시키기 위해선 변환이 필요하다
+            // input = Number(input)
+            /* 또는 출력함수 안에서 쓰던강 ㅋㅋ */
+            // console.log(akjsdlk);        <---이렇게 문법적으로 실행할 수 없는 것을 정의하는 순간 여기서 실행이 멈춘다.
+            console.log(Number(input) + 100);       /* input은 prompt의 반환값이기에 String으로 반환된다. 따라서? */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

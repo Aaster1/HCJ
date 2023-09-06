@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeof</title>
+    <script>
+        //  typeof - 변수 또는 값의 『자료형』을 알려주는 키워드
+        console.log(typeof'김조은');  //String
+        console.log(typeof 10.45);     //number
+        console.log(typeof true);      //boolean
+        console.log(typeof null);          /* null은 타입은 Object이나 값이 없는 형태를 의미한다 (In JavaScript*/
+        console.log(typeof undefined);     //undefined
+
+
+
+        
+        //자바스크립트에서는 함수도 자료형으로 인식한다. (=변수처럼 인식한다 Ex) def1(def2)     <<-매개변수처럼 사용 가능)
+
+        console.log(typeof function() {});          /* 자료형 function */
+        console.log(typeof new Date());            /* 자료형 Object */
+
+    </script>
+</head>
+<body>
+        
+</body>
+</html>
