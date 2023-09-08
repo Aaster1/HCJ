@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location</title>
+    <script>
+        // window.
+        //location
+        //  :   현재 페이지에 대한 위치 정보를 가진 객체
+        document.write(`<h3>현 주소 : ${location.href}</h3>`)
+        document.write(`<h3>호스트 이름 : ${location.hostname}</h3>`)
+        document.write(`<h3>포트: ${location.port}</h3>`)
+        document.write(`<h3>경로 : ${location.pathname}</h3>`)
+        document.write(`<h3>프로토콜 : ${location.protocol}</h3>`)
+        document.write(`<h3>쿼리스트링 : ${location.search}</h3>`)
+        document.addEventListener('DOMContentLoaded',()=>{
+            let $move = document.getElementById('move')
+            let $refresh = document.getElementById('refresh')
+
+            $move.addEventListener('click',()=>{
+                location.href = 'http://www.naver.com'           /* 현 페이지의 주소 : href */
+                location.assign('http://www.naver.com')         /* 단순 페이지 이동 */
+                location.replace('http://www.naver.com')        /* 페이지 자체를 변경하므로, 다음 스탭이 아닌 개념입니다. 따라서 브라우저의 뒤로가기는 불가합니다. */
+            })
+
+            $refresh.addEventListener('click',()=>{
+                location.reload()           /* 새로고침 기능 reload() */
+            })
+
+            
+        })
+
+
+
+
+    </script>
+</head>
+<body>
+        <div class="container">
+            <div class="btn-box">
+                <button id="move">페이지 이동</button>
+                <button id="refresh">새로고침</button>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소</title>
+    <script>
+        let head = document.head    
+        /* title태그와 head 태그는 위에서 정의를 시작했습니다.
+             HEAD는 닫기지 않았지만, 열리는 순간 HEAD태그 내부의 모든 내용을 담은 메모리가 할당되는 모양입니다. */
+
+        let title = document.title          
+        let body = document.body
+        let url = document.URL
+        
+        
+        // 문서 준비 이벤트
+        document.addEventListener('DOMContentLoaded', ()=>{
+            let aList = document.anchors
+            let form = document.forms
+            console.log(head);
+            console.log(body);
+            document.getElementById('title').innerHTML = title
+            document.getElementById('url').innerHTML = url
+            console.log(aList);
+            console.log(form);
+            // console.log(form[0]);
+            // console.log(form[1]);
+        })
+
+
+    </script>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <h3 id="url"></h3>
+    <ul>
+        <li><a name = "temsp" href="http://www.naver.com">www.naver.com</a></li>
+        <li><a name = "temp" href="http://www.kakao.com">www.kakao.com</a></li>
+    </ul>
+
+    <form action=""></form>
+    <form action=""></form>
+
+</body>
+</html>

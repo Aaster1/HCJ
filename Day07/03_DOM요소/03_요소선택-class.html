@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택 - class</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // class로 요소 선택 : getElementsByClassName()
+            const items = document.getElementsByClassName('item')       /* 콜렉션입니다 */
+
+            for (let i = 0; i < items.length; i++) {
+                // items[i].style.width = '200px'
+                // items[i].style.height = '200px'
+                // items[i].style.backgroundColor = 'cornflowerblue'
+                
+                items.item(i).style.marginTop = '50px'
+                items.item(i).style.width = '200px'
+                items.item(i).style.height = '200px'
+                items.item(i).style.backgroundColor = 'cornflowerblue'
+            }
+
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <div class="item"></div>
+    <div class="item"></div>
+</body>
+
+</html>

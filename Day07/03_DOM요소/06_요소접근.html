@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소접근</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let $container = document.getElementsByClassName('container')[0]
+
+            //childNodes : 해당 요소의 자식 노드들
+            console.log($container.childNodes);
+            /* 중간에 나오는 여백 : text || 태그 사이에서 단 하나의 공백이라도 있다면 text라는 node로 읽어들인다는 이야기입니다 */
+            /* 잘 고려해서 index로 접근해야합니다 */
+            /* 반대로, 해당 공백text로 접근하여 무언가를 삽입할 수도 있을 겁니다. */
+            console.log($container.childNodes[1]);
+            console.log($container.childNodes[3]);
+
+            let section1 = document.getElementsByTagName('section')[0]
+            console.log(section1.firstChild);
+            console.log(section1.lastChild);
+            console.log(section1.childNodes[1]);
+            console.log(section1.childNodes[1].previousSibling);
+            console.log(section1.childNodes[1].nextSibling);
+
+            /* 
+                * 관계를 이용한 노드 접근
+                parentNode : 부모노드
+                childNodes : 자식 노드들
+                firstChild : 첫번째 자식 노드
+                lastChild : 마지막 자식 노드
+                previousSibling : 이전 형제 노드
+                nextSibling : 다음 형제 노드
+                */
+
+                /* 
+                    노드 정보
+                        - nodeName
+                        - nodeValue
+                        - nodeType
+                */
+
+                let item1 = document.getElementById('item1')
+                
+                console.log(item1.attributes);
+                console.log(item1.className);
+                console.log(`class : ${item1.classList[0]}`);
+                console.log(item1.id);
+                console.log(item1.parentNode.childNodes);
+                console.log(item1.childNodes);
+                console.log(item1.nodeName);
+                console.log(item1.nodeValue);
+                console.log(item1.textContent);             /* textContent로 접근 */
+                console.log(item1.firstChild.nodeValue);    /* DOM의 NODE를 통해 접근. */
+                // 위와 같이 하위계층으로 가는 이유는, div라는 node가 가리키는것은 오직 div뿐 텍스트내용이나 여타 것들은 모두 해당 DIV NODE의 하위node이다.
+                // 따라서 위와 같이 접근해야만 한다.
+                console.log(item1.nodeType);
+                /* nodeType 종류 : 
+
+                1 (ELEMENT_NODE): 요소(element) 노드입니다. HTML 문서에서는 태그를 나타내는 노드가 이 유형에 해당합니다.
+
+                2 (ATTRIBUTE_NODE): 속성(attribute) 노드입니다. 요소의 속성을 나타냅니다.
+
+                3 (TEXT_NODE): 텍스트(text) 노드입니다. 요소 내의 텍스트 컨텐츠를 나타냅니다.
+
+                4 (CDATA_SECTION_NODE): CDATA 섹션 노드입니다. XML 문서에서 CDATA 섹션 내의 데이터를 나타냅니다.
+
+                5 (ENTITY_REFERENCE_NODE): 엔티티 참조 노드입니다. 엔티티 참조를 나타냅니다.
+
+                6 (ENTITY_NODE): 엔티티 노드입니다. 엔티티를 나타냅니다.
+
+                7 (PROCESSING_INSTRUCTION_NODE): 처리 명령어 노드입니다. XML 문서에서 처리 명령어를 나타냅니다.
+
+                8 (COMMENT_NODE): 주석(comment) 노드입니다. 주석을 나타냅니다.
+
+                9 (DOCUMENT_NODE): 문서(document) 노드입니다. 문서 전체를 나타내며 DOM 트리의 최상위 노드입니다.
+
+                10 (DOCUMENT_TYPE_NODE): 문서 타입 노드입니다. 문서의 유형(DOCTYPE)을 나타냅니다.
+
+                11 (DOCUMENT_FRAGMENT_NODE): 문서 프래그먼트 노드입니다. 문서 일부를 나타내며, 여러 요소를 그룹화할 때 사용됩니다.
+
+                12 (NOTATION_NODE): 표기법 노드입니다. DTD(DTD)에 정의된 표기법을 나타냅니다. 
+                */
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>제목입니다</h1>
+
+        <ul class="list">
+            <li><a href="">리스트1</a></li>
+            <li><a href="">리스트2</a></li>
+            <li><a href="">리스트3</a></li>
+            <li><a href="">리스트4</a></li>
+        </ul>
+
+    </div>
+
+    <section><img src="" alt="이미지1"><img src="" alt="이미지2"><img src="" alt="이미지3"></section>
+
+    <section>
+        <div class="item" id="item1">아이템1</div>
+        <div class="item" id="item2">아이템2</div>
+        <div class="item" id="item3">아이템3</div>
+        <div class="item" id="item4">아이템4</div>
+    </section>
+</body>
+
+</html>

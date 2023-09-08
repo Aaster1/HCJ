@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script>
+        //객체 생성
+        /* 
+            {
+                속성1 : 값1;
+                속성2 : 값2;
+
+                메소드명 : function(){
+
+                }
+
+            }
+             */
+
+
+        let person = {
+            
+            // 속성(property)
+            name : '강진수',
+            age : 29,
+            //메소드(method)
+            print : function(){
+                return person.name + " : " + this.age       /* js의 경우, 자바랑 다르게 전역과 연결되어 있는 느낌이라, 해당 내용이 어디의 name이며 age인지 명시해줘야한다. */
+            }
+
+        }
+
+        document.write(person.name + ',')
+        document.write(person.age + ',')
+        document.write('<br>')
+        document.write(person.print())
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

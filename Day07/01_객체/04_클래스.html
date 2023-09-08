@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+    <script>
+        //클래스 선언
+        //클래스는 클래스로서의 기능(Extends 등) 구현이 가능하다.
+        //하지만 PROTOTYPE은 아무래도 불가능하겠지?
+
+        class Car {
+            // 생성자
+            constructor(name,price){
+                this.name = name
+                this.price = price
+            }
+
+
+            // 메소드
+
+            showInfo(){
+                let result = `${this.name} : ${this.price}`
+                return result
+            }
+        }
+        
+        Car.prototype.age = 19
+        let car = new Car('제네시스',5000)
+        document.write(car.showInfo()+'<br>')
+        document.write(car.age+'<br>')
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
