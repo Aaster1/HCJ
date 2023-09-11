@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="./boardList.html">게시판 목록</a></li>
+                    <li><a href="#">준비중</a>
+                        <ul>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">준비중</a>
+                        <ul>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li><a href="#">준비중</a>
+                        <ul>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                            <li><a href="#">준비중</a></li>
+                        </ul>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="slider">
+            <div class="img-con">
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+                <div><img src="" alt=""></div>
+            </div>
+        </div>
+        <div id="contents">
+            <div class="left-content"></div>
+            <div class="center-content"></div>
+            <div class="right-content"></div>
+        </div>
+        <div id="footer">
+            <div class="logo"></div>
+            <div class="copyright"></div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.nav ul li').mouseover(function(){
+                $(this).find('ul').stop().slideDown(200);
+            })
+            $('.nav ul li').mouseout(function(){
+                $(this).find('ul').stop().slideUp(200);
+            })
+        })
+    </script>
+</body>
+
+</html>

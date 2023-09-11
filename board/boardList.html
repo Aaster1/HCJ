@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boardList</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/boardList.css">
+</head>
+
+<body>
+    <div class="container">
+        <table class="board-list" style="text-align: center;">
+            <tr style="font-weight: bold; font-size: 22px;"">
+                <td width=" 100">글번호</td>
+                <td width="100">제목</td>
+                <td width="100">저자</td>
+                <td width="300">내용</td>
+                <td width="200">등록일자</td>
+                <td width="200">수정일자</td>
+            </tr>
+        </table>
+    </div>
+
+    <form action="//127.0.0.1:8080/api/board" method="POST">
+        <table>
+            <tr>
+                <td><label for="input-boardNo">글번호 : </label></td>
+                <td><input type="text" name="input-boardNo" id="input-boardNo"></td>
+            </tr>
+            <tr>
+                <td><label for="input-title">제목 : </label></td>
+                <td><input type="text" name="input-title" id="input-title"></td>
+            </tr>
+            <tr>
+                <td><label for="input-writer">저자 : </label></td>
+                <td><input type="text" name="input-writer" id="input-writer"></td>
+            </tr>
+            <tr>
+                <td><label for="input-content">내용 : </label></td>
+                <td><textarea name="input-content" id="input-content" cols="50" rows="10"></textarea></td>
+            </tr>
+        </table>
+        <button type="button" onclick="insertJSON()">게시글등록</button>
+        <button type="button" onclick="updateXML()">게시글수정</button>
+        <button type="button" onclick="deleteJSON()">게시글삭제</button>
+    </form>
+
+
+    <script>
+        function getList() {
+            let url = "http://127.0.0.1:8080/api/board"
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                data: '',
+                contentType: 'application/xml',
+                dataType: 'html',
+                success: function (response, status) {
+                    let boardList = JSON.parse(response)
+                    if (boardList.length == 0) {
+                        alert('no data')
+                    } else {
+                        let $boardList = document.querySelector('.board-list')
+                        for (const board of boardList) {
+                            let tr = `<a href="#" id="b${board.boardNo}">
+                                    <tr>    
+                                           <td>${board.boardNo}</td> 
+                                           <td>${board.title}</td> 
+                                           <td>${board.writer}</td> 
+                                           <td>${board.content}</td> 
+                                           <td>${board.regDate}</td> 
+                                           <td>${board.updDate}</td> 
+                                           </tr>
+                                           </a>`
+                            $boardList.innerHTML += tr
+                        }
+                    }
+                },
+                error: function (xhr, status) {
+                    alert('error')
+                }
+            })
+        }
+        getList();
+
+        function insertJSON() {
+            let $title = document.querySelector('#input-title').value
+            let $writer = document.querySelector('#input-writer').value
+            let $content = document.querySelector('#input-content').value
+            let url = "http://127.0.0.1:8080/api/board"
+            let data = {
+                'title': $title,
+                'writer': $writer,
+                'content': $content
+            }
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: JSON.stringify(data),
+                contentType: 'application/json',
+                dataType: 'html',
+                success: function (response, status) {
+                    alert(response)
+                    location.reload()
+                    
+                },
+                error: function (xhr, status) {
+                    alert('error')
+                }
+            })
+        }
+
+        function updateXML() {
+            let $boardNo = document.querySelector('#input-boardNo').value
+            let $title = document.querySelector('#input-title').value
+            let $writer = document.querySelector('#input-writer').value
+            let $content = document.querySelector('#input-content').value
+            let url = "http://127.0.0.1:8080/api/board"
+            let data = `<Board>
+                        <boardNo>${$boardNo}</boardNo>               
+                        <title>${$title}</title>
+                        <writer>${$writer}</writer>
+                        <content>${$content}</content>
+                    </Board>`
+
+            $.ajax({
+                type: 'PUT',
+                url: url,
+                data: data,
+                contentType: 'application/xml',
+                dataType: 'html',
+                success: function (response, status) {
+                    alert(response)
+                    location.reload()
+                },
+                error: function (xhr, status) {
+                    alert('error')
+                }
+            })
+
+        }
+
+        function deleteJSON() {
+            let $boardNo = $('#input-boardNo').val()
+            let url = `http://127.0.0.1:8080/api/board`
+            let data = {
+                'boardNo': $boardNo
+            }
+            $.ajax({
+                type: 'DELETE',
+                url: url,
+                data: JSON.stringify(data),
+                contentType: 'application/json',
+                dataType: 'html',
+                success: function (response, status) {
+                    alert(response)
+                    location.reload()
+                },
+                error: function (xhr, status) {
+                    alert('error')
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
