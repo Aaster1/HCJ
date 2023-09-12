@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/1268f56390.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-header">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+        </div>
+        <div class="bottom-header">
+            <div class="logo"><i class="fa-solid fa-user fa-xl"></i></div>
+            <div class="menu">
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Board</li></a>
+                    <a href="#"><li>Galley</li></a>
+                    <a href="#"><li>About</li></a>
+                </ul>
+            </div>
+            <div class="nav"><i class="fa-solid fa-bars fa-xl"></i>
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Board</li></a>
+                    <a href="#"><li>Galley</li></a>
+                    <a href="#"><li>About</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="section1">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/slide01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/slide08.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/slide07.jpg" alt=""></div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="left-sec2">
+            <img src="img/slide04.jpg" alt="">
+            <p>최신 이미지1</p>
+            <span>최신 이미지1 입니다.</span>
+            <br>
+            <span>새로운 게시물을 감상해보세요.</span>
+            <div>
+                <span>2023-09-12</span>
+                <span></span>
+            </div>
+
+        </div>
+        <div class="center-sec2">
+            <img src="img/slide02.jpg" alt="">
+            <p>최신 이미지2</p>
+            <span>최신 이미지2 입니다.</span>
+            <br>
+            <span>새로운 게시물을 감상해보세요.</span>
+            <div>
+                <span>2023-09-12</span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="right-sec2">
+            <img src="img/slide01.jpg" alt="">
+            <p>최신 이미지3</p>
+            <span>최신 이미지3 입니다.</span>
+            <br>
+            <span>새로운 게시물을 감상해보세요.</span>
+            <div>
+                <span>2023-09-12</span>
+                <span></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="section3">
+        <div class="left-sec3">
+            <img src="img/slide05.jpg" alt="">
+        </div>
+        <div class="right-sec3">
+            <p>Title - Hello Text 001</p>
+            <span>empty content. empty content</span>
+            <br>
+            <span>empty content.</span>
+            <div class="btn" id="btn1" onclick="alert('Click')">button001</div>
+        </div>
+    </div>
+    <div class="section4">
+        <div class="left-sec4">
+            <p>Title - Hello Text 002</p>
+            <span>empty content. empty content</span>
+            <br>
+            <span>empty content.</span>
+            <div class="btn" id="btn2" onclick="alert('Click')">button002</div>
+        </div>
+        <div class="right-sec4">
+            <img src="img/slide06.jpg" alt="">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-blank"></div>
+        <div class="footer-grid">
+            <span>Baord</span>
+            <span>Gallery</span>
+            <span>About</span>
+            <span>공지사항</span>
+            <span>갤러리01</span>
+            <span>사이트소개</span>
+            <span>자유게시판</span>
+            <span>갤러리02</span>
+        </div>
+        <div class="footer-select">
+            <select name="" id="">
+                <option value="http://naver.com">네이버</option>
+                <option value="http://google.com">구글</option>
+            </select>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>Copy right All right reserved</span>
+    </div>
+
+    <script>
+        $(function () {
+            $('.nav').mouseover(() => {
+                $('.nav ul').stop().slideDown(300)
+            })
+            $('.nav').mouseout(() => {
+                $('.nav ul').stop().slideUp(300)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+    overflow: hidden;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.btn{
+    display: inline-block;
+    background-color: RGB(138, 184, 248);
+    padding: 10px 20px;
+    color: black;
+    border-radius: 20px;
+}
+.btn:hover{
+    background-color: RGB(158, 204, 248);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    border: 2px solid black;
+    z-index: 3;
+    
+}
+
+.header .top-header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: RGB(226, 234, 255);
+    opacity: 1;
+}
+.header .top-header ul{
+    margin-right: 20px;
+}
+.header .top-header ul li{
+    font-weight: bold;
+    display: inline-block;
+    padding:10px    ;
+}
+
+.header .bottom-header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.header .bottom-header .logo{
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}
+
+.header .bottom-header .menu{
+    display: inline-block;
+    
+}
+.header .bottom-header .menu ul{
+    display: inline-block;
+    
+    
+}
+.header .bottom-header .menu ul li{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: bold;
+    
+}
+
+.header .bottom-header .nav{
+    position: relative;
+    display: inline-block;
+    margin-right: 90px;
+    font-weight: bold;
+    font-size: 26px;
+}
+.header .bottom-header .nav ul{
+    position: absolute;
+    top: 36px;
+    right: -40px;
+    background-color: #fff;
+    vertical-align: top;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray;
+    background-color: #eee;
+    display: none;
+}
+.header .bottom-header .nav ul li{
+    vertical-align: top;
+    padding: 20px;
+}
+
+
+
+
+
+
+.section2{
+    margin: 250px auto;
+    width: 80%;
+    height: 720px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: RGB(226, 234, 255);
+    
+
+}
+.section2 p{
+    margin: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+.section2 span{
+    margin: 20px;
+}
+
+.section2 .left-sec2{
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px gray;
+    
+}
+.section2 .left-sec2 img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.section2 .left-sec2 p{}
+.section2 .left-sec2 span{}
+.section2 .left-sec2 div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.section2 .left-sec2 div span{
+}
+
+.section2 .center-sec2{
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px gray;
+}
+.section2 .center-sec2 img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.section2 .center-sec2 p{}
+.section2 .center-sec2 span{}
+.section2 .center-sec2 div{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.section2 .center-sec2 div span{
+  
+}
+
+.section2 .right-sec2{
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 15px 15px 15px gray;
+}
+.section2 .right-sec2 img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.section2 .right-sec2 p{}
+.section2 .right-sec2 span{}
+.section2 .right-sec2 div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.section2 .right-sec2 div span{
+}
+
+.section3{
+    width: 50%;
+    height: 512px;
+    margin: 250px auto;
+    display: flex;
+    background-color: #fff;
+}
+
+.section3 .left-sec3{
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+}
+.section3 .left-sec3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section3 .right-sec3{
+    width: 55%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+.section3 .right-sec3 p{
+    padding: 50px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.section3 .right-sec3 span{
+    margin: 50px;
+}
+.section3 .right-sec3 .btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+.section4{
+    width: 60%;
+    height: 512px;
+    display: flex;
+    margin: 250px auto;
+    background-color: RGB(226, 234, 255);
+}
+.section4 .left-sec4{
+    position: relative;
+    display: inline-blo ck;
+    width: 55%;
+    height: 100%;
+}
+.section4 .left-sec4 p{
+    padding: 50px;
+    margin-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.section4 .left-sec4 span{
+    margin: 80px;
+}
+.section4 .left-sec4 .btn{
+    position: absolute; 
+    right: 250px;
+    bottom: 20px;
+}
+
+.section4 .right-sec4{
+    display: inline-block;
+    width: 45%;
+    height: 100%;
+}
+.section4 .right-sec4 img{
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    margin: auto;
+}
+
+.footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.footer .footer-blank{
+width: 30%;
+}
+.footer .footer-grid{
+    margin: 50px;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.footer .footer-grid span{
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 100%;
+    color: white;
+}
+.footer .footer-select{
+    width: 40%;
+}
+.footer .footer-select select{
+    margin: 50px 150px;
+    width: 150px;
+    font-size: 22px ;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.footer .footer-select select option{
+    text-align: center;
+}
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+}
+.footer-bottom span{
+    display: inline-block;
+    font-size: 22px;
+    margin: 30px;  
+}
