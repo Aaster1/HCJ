@@ -1,0 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+}
+
+li{
+  list-style: none;
+
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
+.container{
+  width: 1200px;
+  background-color: #ccc;
+
+}
+
+.header{
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.header .logo{
+  width: 20%;
+  height: 100%;
+}
+
+.header .logo img{
+
+}
+
+.header .nav{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.header .nav ul{
+  display: inline-block;
+}
+
+.header .nav>ul>li{
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.header .nav>ul>li>a{}
+
+.header .nav ul>li>ul{
+  position: absolute;
+  top: 44px;
+  right: -10px;
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  display: none;
+}
+
+.header .nav ul>li>ul>li{
+  display: block;
+}
+
+.header .nav>ul>li>ul>li>a{}
+
+.slider{}
+
+.slider .images{}
+
+.slider .images img{}
+
+.contents{}
+
+.contents .left-content{}
+
+.contents .left-content .tab{}
+
+.contents .left-content .tab .tab1{}
+
+.contents .left-content .tab .tab1 a{}
+
+.contents .left-content .tab .tab1 p{}
+
